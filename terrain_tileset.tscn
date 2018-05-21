@@ -1,0 +1,154 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://terrain_tiles.png" type="Texture" id=1]
+
+[node name="Tiles" type="Node" index="0"]
+
+[node name="grass" type="Sprite" parent="." index="0"]
+
+position = Vector2( 500, 200 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 102, 203, 100, 100 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt" type="Sprite" parent="." index="1"]
+
+position = Vector2( 600, 200 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 203, 203, 100, 100 )
+_sections_unfolded = [ "Region" ]
+
+[node name="water" type="Sprite" parent="." index="2"]
+
+position = Vector2( 700, 200 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 203, 102, 100, 100 )
+_sections_unfolded = [ "Region" ]
+
+[node name="cliff_hor_end" type="Sprite" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 500, 300 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1, 1, 100, 100 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cliff_hor_end" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cliff_hor_end/StaticBody2D" index="0"]
+
+position = Vector2( -5, -5 )
+scale = Vector2( 0.5, 0.5 )
+build_mode = 0
+polygon = PoolVector2Array( -65.0121, -21.7867, -17.7354, 27.3624, 92.7329, 67.1497, 109.584, 67.1497, 109.584, -46.1272, -47.6929, -46.1272, -64.5441, -37.7016 )
+
+[node name="cliff_hor" type="Sprite" parent="." index="4"]
+
+editor/display_folded = true
+position = Vector2( 600, 300 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 102, 1, 100, 100 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cliff_hor" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cliff_hor/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -49.7399, -27.3615, 48.7923, -28.9998, 49.2604, 24.3621, -50.676, 29.7451 )
+
+[node name="cliff_curve" type="Sprite" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( 700, 300 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 102, 102, 100, 100 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cliff_curve" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cliff_curve/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -50.2715, -29.4678, -39.7396, -32.7444, -27.8033, -31.8083, 8.00525, -12.6167, 25.0904, 21.5536, 30.2394, 49.6387, -27.8033, 49.4047, -31.08, 26.9366, -49.8034, 25.0642 )
+
+[node name="cliff_ver" type="Sprite" parent="." index="6"]
+
+editor/display_folded = true
+position = Vector2( 500, 400 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1, 203, 100, 100 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cliff_ver" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cliff_ver/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -27.9103, -49.191, 29.8984, -49.4251, 27.0898, 14.0006, 31.7707, 48.405, -23.9316, 49.1071, -25.8039, -20.8718 )
+
+[node name="cliff_ver_end" type="Sprite" parent="." index="7"]
+
+editor/display_folded = true
+position = Vector2( 600, 400 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1, 102, 100, 100 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cliff_ver_end" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cliff_ver_end/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -17.91, -37.957, -9.48444, -33.0421, 8.77094, -14.0846, 20.005, 18.6815, 28.8987, 39.5114, 28.8987, 49.5752, -27.0377, 49.5752, -27.0377, 23.1283, -29.3781, 12.1283, -27.5057, -0.978149, -27.2717, -30.9357 )
+
+

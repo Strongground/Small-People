@@ -1,1 +1,1 @@
-Small-People
+small_people
